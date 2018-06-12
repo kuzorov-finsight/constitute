@@ -1,13 +1,14 @@
 {
-  "name": "constitute",
+  "name": "constitute-es5",
   "version": "1.6.2",
   "description": "Minimalistic Dependency Injection (DI) for ES6",
   "repository": {
     "type": "git",
     "url": "https://github.com/justmoon/constitute.git"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "./node_modules/.bin/babel . -d dist --ignore='node_modules,dist'",
     "test": "node node_modules/.bin/istanbul test -- _mocha",
     "lint": "eslint --ext .js --ext es7 .",
     "codecov": "cat coverage/lcov.info | codecov"
@@ -19,11 +20,15 @@
     "testing",
     "productivity"
   ],
-  "author": "Stefan Thomas <justmoon@members.fsf.org>",
+  "author": "Stefan Thomas <justmoon@members.fsf.org>, Eugene Kuzorov <kuzorov@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "babel": "^5.8.23",
-    "babel-eslint": "^4.1.1",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
     "chai": "^3.2.0",
     "codecov.io": "^0.1.6",
     "eslint": "^1.2.1",
