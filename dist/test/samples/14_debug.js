@@ -1,7 +1,5 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Container = require('../../').Container;
@@ -16,23 +14,17 @@ module.exports = function () {
       _classCallCheck(this, FaultyClass);
     }
 
-    _createClass(FaultyClass, null, [{
-      key: 'constitute',
-      value: function constitute() {
-        return [{}];
-      }
-    }]);
+    FaultyClass.constitute = function constitute() {
+      return [{}];
+    };
 
     return FaultyClass;
   }();
 
   var ExampleClass = function () {
-    _createClass(ExampleClass, null, [{
-      key: 'constitute',
-      value: function constitute() {
-        return [FaultyClass];
-      }
-    }]);
+    ExampleClass.constitute = function constitute() {
+      return [FaultyClass];
+    };
 
     function ExampleClass(b) {
       _classCallCheck(this, ExampleClass);
@@ -47,12 +39,9 @@ module.exports = function () {
   function FaultyFactory() {}
 
   var FaultyPostClass = function () {
-    _createClass(FaultyPostClass, null, [{
-      key: 'constitute',
-      value: function constitute() {
-        return [Container];
-      }
-    }]);
+    FaultyPostClass.constitute = function constitute() {
+      return [Container];
+    };
 
     function FaultyPostClass(container) {
       _classCallCheck(this, FaultyPostClass);

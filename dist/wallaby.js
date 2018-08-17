@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function (wallaby) {
   return {
     files: ['lib/*.js', 'lib/**/*.js', 'test/helpers/*.js', 'test/samples/*.js', 'index.js'],

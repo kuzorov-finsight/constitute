@@ -1,7 +1,5 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 module.exports = function () {
@@ -18,12 +16,9 @@ module.exports = function () {
   };
 
   var C = function () {
-    _createClass(C, null, [{
-      key: 'constitute',
-      value: function constitute() {
-        return [E];
-      }
-    }]);
+    C.constitute = function constitute() {
+      return [E];
+    };
 
     function C(e) {
       _classCallCheck(this, C);
@@ -35,12 +30,9 @@ module.exports = function () {
   }();
 
   var D = function () {
-    _createClass(D, null, [{
-      key: 'constitute',
-      value: function constitute() {
-        return [E, F];
-      }
-    }]);
+    D.constitute = function constitute() {
+      return [E, F];
+    };
 
     function D(e, f) {
       _classCallCheck(this, D);
@@ -53,12 +45,9 @@ module.exports = function () {
   }();
 
   var A = function () {
-    _createClass(A, null, [{
-      key: 'constitute',
-      value: function constitute() {
-        return [B, C, D];
-      }
-    }]);
+    A.constitute = function constitute() {
+      return [B, C, D];
+    };
 
     function A(b, c, d) {
       _classCallCheck(this, A);

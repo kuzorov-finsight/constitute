@@ -1,9 +1,27 @@
 {
   "presets": [
-    "env",
-    "stage-3"
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7",
+            "ie >= 9"
+          ]
+        }
+      }
+    ]
   ],
   "plugins": [
-    "transform-decorators-legacy"
+    "transform-decorators-legacy",
+    [
+      "transform-es2015-classes",
+      {
+        "loose": true
+      }
+    ],
+    "transform-proto-to-assign"
   ]
 }
